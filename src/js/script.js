@@ -251,7 +251,7 @@ function renderStory() {
                             </div>
                             <div class="story-item reverse">
                                 <img src="assets/img/4.jpeg" alt="vicky&dani">
-                                <p>Queremos haceros participar en nuestra historia que todavía tiene mucho capítulos por escribir.</p>
+                                <p>Queremos haceros participar en nuestra historia que todavía tiene muchos capítulos por escribir.</p>
                             </div>
                             <div class="story-item">
                                 <img src="assets/img/5.jpeg" alt="vicky&dani">

@@ -238,7 +238,7 @@ function renderStory() {
     const content = `<div class="story-page">
                         <div class="story-container">
                             <div class="story-item">
-                                <img src="assets/img/1.jpeg" alt="vicky&dani">
+                                <img src="assets/img/1.jpg" alt="vicky&dani">
                                 <p>Esta bonita historia comienza a finales de 2020, un año complicado para todos, y que supuso un antes y un después en nuestras vidas.</p>
                             </div>
                             <div class="story-item reverse">

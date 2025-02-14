@@ -497,18 +497,6 @@ header {
     border: 1px solid var(--secondary-color);
 }
 
-.confirm-form-container form::before,
-.confirm-form-container form::after {
-    content: '';
-    position: absolute;
-    width: 120px;
-    height: 120px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%239b6738' stroke-width='2'%3E%3Cpath d='M50 10C50 40 20 50 10 50C20 50 50 60 50 90C50 60 80 50 90 50C80 50 50 40 50 10Z'/%3E%3Cpath d='M50 20C50 40 30 50 20 50C30 50 50 60 50 80C50 60 70 50 80 50C70 50 50 40 50 20Z'/%3E%3C/svg%3E");
-    background-size: contain;
-    background-repeat: no-repeat;
-    opacity: 0.3;
-}
-
 .confirm-form-container form::before {
     top: -40px;
     left: -40px;
@@ -695,6 +683,10 @@ h1::after {
     }
 
     /* Story items */
+    .story-container {
+        width: 85%;
+    }
+
     .story-item {
         flex-direction: column;
         gap: 10px;
@@ -702,7 +694,8 @@ h1::after {
     }
 
     .story-item img {
-        width: 80%;
+        width: 100%;
+        height: 100%;
     }
 
     .story-item.reverse {
@@ -710,6 +703,10 @@ h1::after {
     }
 
     /* Timeline */
+    .details-container h2{
+        padding: 0 5px;
+        margin: 0;
+    }
     .details-timeline-item {
         grid-template-columns: 1fr;
         margin: 30px 0;
@@ -769,9 +766,6 @@ h1::after {
     }
 
     /* Form */
-    .confirm-form-container {
-        padding: 40px 20px;
-    }
 
     .confirm-form-container form {
         padding: 30px 20px;
@@ -792,6 +786,7 @@ h1::after {
         grid-template-columns: 1fr;
         gap: 20px;
     }
+
 
     .details-date-container-items iframe {
         width: 100%;

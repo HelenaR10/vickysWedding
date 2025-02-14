@@ -349,12 +349,6 @@ header {
 .story-item img {
     width: 45%;
     border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-}
-
-.story-item img:hover {
-    transform: scale(1.02);
 }
 
 .story-item p {

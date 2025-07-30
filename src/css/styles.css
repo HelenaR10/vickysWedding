@@ -692,6 +692,21 @@ h1::after {
         font-size: 60px;
         padding: 15px 25px;
     }
+
+    .story-item-img {
+        width: 100%;
+        height: 100%;
+        box-shadow: none;
+        transition: none;
+        object-fit: cover;
+
+        img {
+            width: 300px;
+            height: 300px;
+            box-shadow: none;
+            transition: none;
+        }
+    }
 }
 
 /* Móvil (hasta 767px) */
@@ -765,8 +780,8 @@ h1::after {
         object-fit: cover;
 
         img {
-            width: 500px;
-            height: 500px;
+            width: 300px;
+            height: 300px;
             box-shadow: none;
             transition: none;
         }

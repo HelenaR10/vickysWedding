@@ -643,6 +643,10 @@ h1::after {
         font-size: 18px;
     }
 
+    .header-language {
+        position: relative;
+    }
+
     /* Contenedores principales */
     .logistics-container,
     .details-timeline,
@@ -712,6 +716,10 @@ h1::after {
     .logo {
         width: 200px;
         height: 200px;
+    }
+
+    .header-language {
+        position: relative;
     }
 
     /* Contenedores principales */
@@ -808,6 +816,8 @@ h1::after {
         width: 100%;
         font-size: 16px;
         padding: 12px;
+        display: flex;
+        justify-content: center;
     }
 
     /* Form */
@@ -877,4 +887,9 @@ h1::after {
         font-size: 16px;
         padding: 10px 15px;
     }
+
+    .header-language {
+        position: relative;
+    }
+
 }

@@ -1,0 +1,90 @@
+{
+  "navigation": {
+    "home": "Home",
+    "details": "Evenement details",
+    "story": "Ons verhaal",
+    "logistics": "Bijdragen",
+    "confirmForm": "Bevestig je aanwezigheid"
+  },
+  "home": {
+    "date": "Zaterdag 1 november 2025",
+    "countdown": {
+      "days": "Dagen",
+      "hours": "Uren",
+      "minutes": "Minuten",
+      "seconds": "Seconden"
+    },
+    "venue": "We verwachten je in",
+    "weddingDay": "De grote dag is hier! 🎉"
+  },
+  "details": {
+    "title": "Evenement details",
+    "weddingDate": "Onze bruiloft wordt gevierd op",
+    "date": "Zaterdag 1 november 2025",
+    "addToCalendar": "Toevoegen aan agenda",
+    "program": "Programma",
+    "timeline": {
+      "reception": {
+        "title": "Receptie",
+        "description": "Ontvangst van gasten en welkom om deze speciale dag te beginnen."
+      },
+      "ceremony": {
+        "title": "Ceremonie",
+        "description": "Viering van de ceremonie omringd door onze dierbaren in een unieke omgeving."
+      },
+      "cocktail": {
+        "title": "Cocktail",
+        "description": "Welkomstborrel waar we de eerste momenten samen kunnen delen."
+      },
+      "meal": {
+        "title": "Diner",
+        "description": "Bruiloftsdiner waar we zullen genieten van een zorgvuldig samengestelde gastronomische selectie."
+      },
+      "dance": {
+        "title": "Dansen",
+        "description": "Laat het feest beginnen! Muziek en dans om samen deze speciale dag te vieren."
+      }
+    }
+  },
+  "story": {
+    "paragraphs": [
+      "Dit mooie verhaal begint eind 2020, een ingewikkeld jaar voor iedereen, en dat een voor en na betekende in ons leven.",
+      "Vanaf toen begonnen we onze relatie op te bouwen op basis van respect, bewondering, toewijding en liefde, die elke 29 oktober wordt gevierd, en wanneer we deze vereniging samen vieren, zijn we al 5 jaar samen!",
+      "Al die tijd hebben we veel dingen meegemaakt, voornamelijk goede, en als ze niet helemaal positief waren... zetten we er altijd een goed gezicht bij. 😁",
+      "We willen jullie deelgenoot maken van ons verhaal dat nog veel hoofdstukken heeft om te schrijven.",
+      "Dank je wel dat je in ons leven bent ❤️"
+    ]
+  },
+  "logistics": {
+    "paragraphs": [
+      "Voor ons is het allerbelangrijkste en zonder twijfel dat jullie allemaal op deze speciale dag voor ons kunnen zijn. Jullie zijn onze vrienden en familie, deze dag vieren zonder jullie zou geen zin hebben!",
+      "Hoewel het waar is dat iedereen die wil helpen met veel dankbaarheid zal worden ontvangen.",
+      "Dus onthoud: aanwezigheid verplicht, cadeau optioneel!",
+      "We prefereren dat het geld contant wordt gegeven, maar als dat niet mogelijk is, kan het per bankoverschrijving.",
+      "Nogmaals, we benadrukken dat het belangrijkste jullie aanwezigheid is, maar als gastheren hebben we gedacht dat om het plezier van het evenement te garanderen en rekening houdend met de uren waarin de viering zal plaatsvinden, tenzij het essentieel is, raden we aan en geven we de voorkeur aan dat de kleintjes ons deze dag niet vergezellen.",
+      "Zoals we zeggen, als het niet mogelijk is dat ze onder de hoede van anderen blijven, zijn ze meer dan welkom, en voor vragen zijn we er voor alles wat jullie nodig hebben."
+    ]
+  },
+  "form": {
+    "title": "Bevestig je aanwezigheid",
+    "fields": {
+      "name": {
+        "label": "Naam",
+        "placeholder": "Je naam"
+      },
+      "lastname": {
+        "label": "Achternaam",
+        "placeholder": "Je achternaam"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "jouw@email.com"
+      },
+      "phone": {
+        "label": "Telefoon",
+        "placeholder": "+31 XXX XXX XXX"
+      }
+    },
+    "submit": "Bevestig aanwezigheid"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "details": "Detalles del evento",
+    "story": "Nuestra historia",
+    "logistics": "Aportaciones",
+    "confirmForm": "Confirma tu asistencia"
+  },
+  "home": {
+    "date": "Sábado 01 de noviembre de 2025",
+    "countdown": {
+      "days": "Días",
+      "hours": "Horas",
+      "minutes": "Minutos",
+      "seconds": "Segundos"
+    },
+    "venue": "Te esperamos en",
+    "weddingDay": "¡Es el gran día! 🎉"
+  },
+  "details": {
+    "title": "Detalles del evento",
+    "weddingDate": "Nuestra boda se celebrará el",
+    "date": "Sábado 01 de noviembre de 2025",
+    "addToCalendar": "Agregar al calendario",
+    "program": "Programa",
+    "timeline": {
+      "reception": {
+        "title": "Recepción",
+        "description": "Recibimiento de invitados y bienvenida para comenzar este día tan especial."
+      },
+      "ceremony": {
+        "title": "Ceremonia",
+        "description": "Celebración de la ceremonia rodeados de nuestros seres queridos en un entorno único."
+      },
+      "cocktail": {
+        "title": "Cóctel",
+        "description": "Aperitivo de bienvenida donde podremos compartir los primeros momentos juntos."
+      },
+      "meal": {
+        "title": "Comida",
+        "description": "Banquete nupcial donde disfrutaremos de una cuidada selección gastronómica."
+      },
+      "dance": {
+        "title": "Baile",
+        "description": "¡Que empiece la fiesta! Música y baile para celebrar juntos este día tan especial."
+      }
+    }
+  },
+  "story": {
+    "paragraphs": [
+      "Esta bonita historia comienza a finales de 2020, un año complicado para todos, y que supuso un antes y un después en nuestras vidas.",
+      "A partir de entonces empezamos a construir a base del respeto, admiración, compromiso y amor, nuestra relación, que se celebra cada 29 de octubre, y que cuando celebremos juntos está unión, ¡ya llevaremos 5 años!",
+      "Todo este tiempo hemos vivido muchas cosas, principalmente buenas, y si no eran del todo positivas… siempre le poníamos buena cara. 😁",
+      "Queremos haceros participar en nuestra historia que todavía tiene muchos capítulos por escribir.",
+      "Gracias por estar en nuestras vidas ❤️"
+    ]
+  },
+  "logistics": {
+    "paragraphs": [
+      "Para nosotros lo más importante y sin ninguna duda es que todos podáis estar este día tan especial para nosotros. Sois nuestros amigos y familiares, ¡celebrar este día sin vosotros no tendría sentido!",
+      "Si bien es cierto que todo el que quiera ayudar será recibido con mucha gratitud.",
+      "Así que recordad, ¡asistencia obligatoria, regalo opcional!",
+      "Preferimos que el dinero se entregue en efectivo, pero si no es posible, se puede hacer por transferencia.",
+      "De nuevo, recalcamos que lo más importante es vuestra asistencia, pero como anfitriones hemos pensado que para garantizar el disfrute del evento y teniendo en cuenta las horas en las que se va llevar a cabo la celebración, a no ser que sea imprescindible, aconsejamos y preferimos que los más pequeños no nos acompañen este día.",
+      "Como decimos, si no es posible que queden al cuidado de otros, son más que bienvenidos, y cualquier duda estamos aquí para lo que necesitéis."
+    ]
+  },
+  "form": {
+    "title": "Confirma tu asistencia",
+    "fields": {
+      "name": {
+        "label": "Nombre",
+        "placeholder": "Tu nombre"
+      },
+      "lastname": {
+        "label": "Apellidos",
+        "placeholder": "Tus apellidos"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "tu@email.com"
+      },
+      "phone": {
+        "label": "Teléfono",
+        "placeholder": "+34 XXX XXX XXX"
+      }
+    },
+    "submit": "Confirmar asistencia"
+  }
+}

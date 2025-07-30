@@ -83,6 +83,42 @@ header {
     transition: all 0.3s ease;
 }
 
+.header-language {
+    position: absolute;
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    width: 80%;
+    justify-content: flex-start;
+}
+
+.language-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    padding: 5px;
+    background-color: transparent;
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+
+    img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.language-button:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.language-button.active {
+    background-color: var(--secondary-color);
+    color: white;
+    border: 1px solid var(--secondary-color);
+}
+
 .navbar ul {
     display: flex;
     justify-content: space-between;
@@ -334,7 +370,7 @@ header {
     align-items: center;
     text-align: center;
     gap: 60px;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: var(--primary-color);
     padding: 40px;
     border-radius: 20px;
     backdrop-filter: blur(5px);
@@ -381,7 +417,8 @@ header {
     margin: 0 auto;
     gap: 30px;
     padding: 50px;
-    color: var(--tertiary-color);
+    color: white;
+    font-family: var(--primary-color);
     font-family: var(--font-family-text);
     border-radius: 20px;
     position: relative;
@@ -402,7 +439,7 @@ header {
     width: 80%;
     padding: 20px;
     border-radius: 15px;
-    background-color: rgba(155, 103, 56, 0.5);
+    background-color: rgba(155, 103, 56, 0.8);
     transition: transform 0.3s ease;
 }
 
@@ -411,11 +448,23 @@ header {
 }
 
 .money {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     font-size: 36px;
     font-family: var(--font-family-title);
-    color: var(--secondary-color);
+    color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     margin: 15px 0;
+
+    p {
+        font-size: 20px;
+        color: var(--tertiary-color);
+        font-family: var(--font-family-text);
+        text-align: center;
+        background-color: white;
+    }
 }
 
 .copy-button {

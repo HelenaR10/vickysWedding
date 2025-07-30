@@ -58,26 +58,7 @@ document.addEventListener('click', (e) => {
             break;
         case e.target.matches('.confirm-form'):
             renderConfirmForm();
-
-            document.getElementById('whatsappForm').addEventListener('submit', function(event) {
-                event.preventDefault(); // Evita que se envíe el formulario
-            
-                // Obtener datos del formulario
-                let name = document.getElementById("name").value;
-                let lastname = document.getElementById("lastname").value;
-                let email = document.getElementById("email").value;
-                let phone = document.getElementById("phone").value;
-            
-                // Número de WhatsApp (cambiar por el tuyo sin + ni espacios)
-                let numeroWhatsApp = "638476592";
-            
-                // Construir el enlace de WhatsApp
-                let url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent("Nombre: " + name + "\nApellidos: " + lastname + "\nEmail: " + email + "\nTeléfono: " + phone)}`;
-            
-                // Abrir WhatsApp en una nueva ventana
-                window.open(url, "_blank");
-            });
-        break;
+            break;
         case e.target.matches('#es') || e.target.closest('#es'):
             changeLanguage('es');
             break;
@@ -186,8 +167,12 @@ function renderHome() {
 
     const main = document.querySelector('main');
     main.innerHTML = content;
-    countdown();
-    setInterval(countdown, 1000);
+    
+    // Usar setTimeout para permitir que el DOM se actualice antes de ejecutar countdown
+    setTimeout(() => {
+        countdown();
+        setInterval(countdown, 1000);
+    }, 10);
 }
 
 function countdown() {
@@ -196,7 +181,10 @@ function countdown() {
     const timeDifference = weddingDate - now;
 
     if (timeDifference <= 0) {
-        document.getElementById('countdown').innerHTML = translations.home?.weddingDay || "¡Es el gran día! 🎉";
+        const countdownElement = document.getElementById('countdown');
+        if (countdownElement) {
+            countdownElement.innerHTML = translations.home?.weddingDay || "¡Es el gran día! 🎉";
+        }
         return;
     }
     
@@ -205,10 +193,16 @@ function countdown() {
     const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
     
-    document.getElementById("days").textContent = days;
-    document.getElementById("hours").textContent = hours;
-    document.getElementById("minutes").textContent = minutes;
-    document.getElementById("seconds").textContent = seconds;
+    // Verificar que los elementos existen antes de actualizarlos
+    const daysElement = document.getElementById("days");
+    const hoursElement = document.getElementById("hours");
+    const minutesElement = document.getElementById("minutes");
+    const secondsElement = document.getElementById("seconds");
+    
+    if (daysElement) daysElement.textContent = days;
+    if (hoursElement) hoursElement.textContent = hours;
+    if (minutesElement) minutesElement.textContent = minutes;
+    if (secondsElement) secondsElement.textContent = seconds;
 }
 
 function renderDetails() {
@@ -297,23 +291,33 @@ function renderStory() {
     const content = `<div class="story-page">
                         <div class="story-container">
                             <div class="story-item">
-                                <img src="assets/img/1.jpg" alt="vicky&dani">
+                                <div class="story-item-img">
+                                    <img src="assets/img/7.jpeg" alt="vicky&dani">
+                                </div>
                                 <p>${translations.story?.paragraphs?.[0] || 'Esta bonita historia comienza a finales de 2020, un año complicado para todos, y que supuso un antes y un después en nuestras vidas.'}</p>
                             </div>
                             <div class="story-item reverse">
-                                <img src="assets/img/2.jpeg" alt="vicky&dani">
+                                <div class="story-item-img">
+                                    <img src="assets/img/2.jpeg" alt="vicky&dani">
+                                </div>
                                 <p>${translations.story?.paragraphs?.[1] || 'A partir de entonces empezamos a construir a base del respeto, admiración, compromiso y amor, nuestra relación, que se celebra cada 29 de octubre, y que cuando celebremos juntos está unión, ¡ya llevaremos 5 años!'}</p>
                             </div>
                             <div class="story-item">
-                                <img src="assets/img/3.jpeg" alt="vicky&dani">
+                                <div class="story-item-img">
+                                    <img src="assets/img/3.jpeg" alt="vicky&dani">
+                                </div>
                                 <p>${translations.story?.paragraphs?.[2] || 'Todo este tiempo hemos vivido muchas cosas, principalmente buenas, y si no eran del todo positivas… siempre le poníamos buena cara. 😁'}</p>
                             </div>
                             <div class="story-item reverse">
-                                <img src="assets/img/4.jpeg" alt="vicky&dani">
+                                <div class="story-item-img">
+                                    <img src="assets/img/4.jpeg" alt="vicky&dani">
+                                </div>
                                 <p>${translations.story?.paragraphs?.[3] || 'Queremos haceros participar en nuestra historia que todavía tiene muchos capítulos por escribir.'}</p>
                             </div>
                             <div class="story-item">
-                                <img src="assets/img/5.jpeg" alt="vicky&dani">
+                                <div class="story-item-img">
+                                    <img src="assets/img/5.jpeg" alt="vicky&dani">
+                                </div>
                                 <p>${translations.story?.paragraphs?.[4] || 'Gracias por estar en nuestras vidas ❤️'}</p>
                             </div>
                         </div>
@@ -350,14 +354,17 @@ function renderLogistics() {
 
     // Añadir la funcionalidad de copiado
     const copyButton = document.getElementById('copyButton');
+    const accountNumber = document.getElementById('accountNumber');
     
-    copyButton.addEventListener('click', () => {
-        navigator.clipboard.writeText(accountNumber.textContent);
-        copyButton.classList.add('copied');
-        setTimeout(() => {
-            copyButton.classList.remove('copied');
-        }, 1500);
-    });
+    if (copyButton && accountNumber) {
+        copyButton.addEventListener('click', () => {
+            navigator.clipboard.writeText(accountNumber.textContent);
+            copyButton.classList.add('copied');
+            setTimeout(() => {
+                copyButton.classList.remove('copied');
+            }, 1500);
+        });
+    }
 }
 function renderConfirmForm() {
     const content = `<div class="confirm-form-container">
@@ -385,4 +392,27 @@ function renderConfirmForm() {
 
     const main = document.querySelector('main');
     main.innerHTML = content;
+    
+    // Agregar funcionalidad al formulario de WhatsApp
+    const whatsappForm = document.getElementById('whatsappForm');
+    if (whatsappForm) {
+        whatsappForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita que se envíe el formulario
+        
+            // Obtener datos del formulario
+            let name = document.getElementById("name").value;
+            let lastname = document.getElementById("lastname").value;
+            let email = document.getElementById("email").value;
+            let phone = document.getElementById("phone").value;
+        
+            // Número de WhatsApp (cambiar por el tuyo sin + ni espacios)
+            let numeroWhatsApp = "638476592";
+        
+            // Construir el enlace de WhatsApp
+            let url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent("Nombre: " + name + "\nApellidos: " + lastname + "\nEmail: " + email + "\nTeléfono: " + phone)}`;
+        
+            // Abrir WhatsApp en una nueva ventana
+            window.open(url, "_blank");
+        });
+    }
 }
